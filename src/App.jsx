@@ -1,12 +1,15 @@
+import React, { useState } from "react";
 import SidebarMenu from "./components/common/Sidebar/Sidebar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardIndex from "./components/pages/Dashboard";
 import TablesIndex from "./components/pages/Tables";
 import { useTheme } from "./theme/ThemeContext";
-import ThemeToggle from "./theme/ThemeToggle";
 
 function App() {
   const { isDark } = useTheme();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(prev => !prev);
 
   return (
     <BrowserRouter>
@@ -15,16 +18,13 @@ function App() {
           isDark
             ? "xl:bg-[url(/background.webp)] bg-[url(/background-mobile.jpg)]"
             : "xl:bg-[url(/v904-nunny-012.jpg)] bg-[url(/v904-nunny-012-mbile.jpg)]"
-        }  flex`}
+        } flex xl:flex-row flex-col`}
       >
-        <SidebarMenu />
-
-        <div className="flex-1 p-6 text-white  flex flex-col">
-        
-
+        <SidebarMenu isOpen={sidebarOpen} />
+        <div className="flex-1 p-6 text-white flex flex-col w-full">
           <main className="flex-1 overflow-y-auto">
             <Routes>
-              <Route path="/" element={<DashboardIndex />} />
+              <Route path="/" element={<DashboardIndex toggleSidebar={toggleSidebar} />} />
               <Route path="/tables" element={<TablesIndex />} />
               <Route path="/billing" element={<div>Billing Page</div>} />
               <Route path="/profile" element={<div>Profile Page</div>} />

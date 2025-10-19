@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Home,
-  ChartNoAxesColumn,
-  CreditCard,
-  UserRoundPen,
-  StickyNote,
-  Rocket,
-} from "lucide-react";
 import SidebarTitle from "./SidebarTitles";
 import { useTheme } from "../../../theme/ThemeContext";
+import { ChartNoAxesColumn, CreditCard, Home, Rocket, StickyNote, UserRoundPen } from "lucide-react";
 
-function SidebarMenu() {
+function SidebarMenu({ isOpen }) {
   const { isDark } = useTheme();
 
   const Titles = [
@@ -21,15 +14,30 @@ function SidebarMenu() {
     { name: "Sign In", Icon: StickyNote, to: "/signin" },
     { name: "Sign Up", Icon: Rocket, to: "/signup" },
   ];
-  return (
-    <div className="w-2/12 h-full items-center  ml-4 hidden xl:flex">
-      <div className={`h-[95%] w-full ${isDark ? "bg-[#0e172c]" : "bg-[#d5e0f8]"}  rounded-lg px-4 py-6 flex-col flex gap-4`}>
-        
 
+  return (
+    <div
+      className={`
+        h-full
+        xl:flex xl:w-2/12 xl:ml-4 xl:static
+        fixed top-0 left-0 w-64 z-50
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        xl:translate-x-0 transition-transform duration-300 ease-in-out
+      `}
+    >
+      <div
+        className={`h-[95%] w-full ${
+          isDark ? "bg-[#0e172c]" : "bg-[#d5e0f8]"
+        } rounded-lg px-4 py-6 flex-col flex gap-4 xl:m-4 m-2`}
+      >
         {Titles.map((title, index) => (
           <React.Fragment key={index}>
             {title.name === "Profile" && (
-              <div className={`px-4 py-2 font-bold ${isDark ? "text-white" : "text-black"}`}>
+              <div
+                className={`px-4 py-2 font-bold ${
+                  isDark ? "text-white" : "text-black"
+                }`}
+              >
                 Account Pages
               </div>
             )}
