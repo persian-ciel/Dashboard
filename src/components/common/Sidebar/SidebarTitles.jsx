@@ -26,7 +26,7 @@ function SidebarTitle({ name, Icon, to }) {
         `}
     >
       <div
-        className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-colors duration-300 
+        className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors duration-300 
           ${
             isActive
               ? `${isDark ? "bg-[#ce324a]" : "bg-[#3b6aeb] "}`
@@ -37,12 +37,12 @@ function SidebarTitle({ name, Icon, to }) {
       >
         {Icon && (
           <Icon
-            className={`w-5 h-5 ${isActive ? "text-white" : "text-white"}`}
+            className={`w-5 h-5  ${isActive ? "text-white" : "text-white"}`}
           />
         )}
       </div>
       <span
-        className={`font-medium ${
+        className={`font-medium text-sm ${
           isActive
             ? `${isDark ? "text-white" : "text-black "}`
             : `${isDark ? "text-white" : "text-black "}`

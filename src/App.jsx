@@ -9,7 +9,7 @@ function App() {
   const { isDark } = useTheme();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => setSidebarOpen(prev => !prev);
+  const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
   return (
     <BrowserRouter>
@@ -20,12 +20,22 @@ function App() {
             : "xl:bg-[url(/v904-nunny-012.jpg)] bg-[url(/v904-nunny-012-mbile.jpg)]"
         } flex xl:flex-row flex-col`}
       >
-        <SidebarMenu isOpen={sidebarOpen} />
+        <SidebarMenu
+          isOpen={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
+
         <div className="flex-1 p-6 text-white flex flex-col w-full">
           <main className="flex-1 overflow-y-auto">
             <Routes>
-              <Route path="/" element={<DashboardIndex toggleSidebar={toggleSidebar} />} />
-              <Route path="/tables" element={<TablesIndex />} />
+              <Route
+                path="/"
+                element={<DashboardIndex toggleSidebar={toggleSidebar} />}
+              />
+              <Route
+                path="/tables"
+                element={<TablesIndex toggleSidebar={toggleSidebar} />}
+              />
               <Route path="/billing" element={<div>Billing Page</div>} />
               <Route path="/profile" element={<div>Profile Page</div>} />
               <Route path="/signin" element={<div>Sign In Page</div>} />

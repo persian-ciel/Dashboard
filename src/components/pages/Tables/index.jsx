@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "../../common/Nav/Nav";
 
-function TablesIndex() {
+function TablesIndex({ toggleSidebar }) {
   return (
     <>
-      <NavBar name="Tables" />
+      <NavBar name="Tables" toggleSidebar={toggleSidebar}/>
     </>
   );
 }

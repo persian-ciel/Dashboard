@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SidebarTitle from "./SidebarTitles";
 import { useTheme } from "../../../theme/ThemeContext";
 import { ChartNoAxesColumn, CreditCard, Home, Rocket, StickyNote, UserRoundPen } from "lucide-react";
 
-function SidebarMenu({ isOpen }) {
+function SidebarMenu({ isOpen, onClose }) {
   const { isDark } = useTheme();
+  const sidebarRef = useRef(null);
+
+  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen, onClose]);
 
   const Titles = [
     { name: "Dashboard", Icon: Home, to: "/" },
@@ -17,6 +30,7 @@ function SidebarMenu({ isOpen }) {
 
   return (
     <div
+      ref={sidebarRef}
       className={`
         h-full
         xl:flex xl:w-2/12 xl:ml-4 xl:static

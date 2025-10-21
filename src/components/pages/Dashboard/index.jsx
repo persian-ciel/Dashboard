@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../../common/Nav/Nav";
 import InformationTiles from "./Information";
 import { Globe, Wallet, StickyNote, ShoppingCart } from "lucide-react";
+import DashboardTiles from "./Tiles";
 
 
 function DashboardIndex({ toggleSidebar }) {
@@ -26,6 +27,7 @@ function DashboardIndex({ toggleSidebar }) {
           ))}
         
       </div>
+      <DashboardTiles />
     </>
   );
 }
