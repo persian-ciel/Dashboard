@@ -35,7 +35,7 @@ function SidebarMenu({ isOpen, onClose }) {
         h-full
         xl:flex xl:w-2/12 xl:ml-4 xl:static
         fixed top-0 left-0 w-64 z-50
-        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        ${isOpen ? "translate-x-0 z-50" : "-translate-x-full"}
         xl:translate-x-0 transition-transform duration-300 ease-in-out
       `}
     >

@@ -1,20 +1,24 @@
 import { ResponsivePie } from "@nivo/pie";
+import { useTheme } from "../../../theme/ThemeContext";
 
 
 export default function GaugeChart() {
   const value = 95;
+  const { isDark } = useTheme();
   
+  const scoreColor = isDark ? "#ce324a" : "#3b6aeb"; 
+  const remainingColor = isDark ? "#ffffff" : "#444444";
 
   const data = [
     {
       id: "completed",
       value: value,
-      color: "#3b82f6",
+      color: scoreColor,
     },
     {
       id: "remaining",
       value: 100 - value,
-      color: "#1e293b",
+      color: remainingColor,
     },
   ];
 
@@ -22,7 +26,6 @@ export default function GaugeChart() {
     <div className="w-full h-64 flex flex-col items-center justify-center relative">
       <div className="w-full h-36 pt-3">
         {" "}
-        {/* تنظیم ارتفاع برای چارت */}
         <ResponsivePie
           data={data}
           innerRadius={0.8}
@@ -37,7 +40,7 @@ export default function GaugeChart() {
           motionConfig="gentle"
         />
       </div>
-      <div className="w-full h-16 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl z-50 -mt-10 justify-between flex items-center px-5">
+      <div className="w-full h-16 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl z-1 -mt-10 justify-between flex items-center px-5">
         <div>0%</div>
         <div>
           <p className="text-3xl font-bold text-white">{value}%</p>

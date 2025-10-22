@@ -5,9 +5,12 @@ export default function SafetyScore() {
   const value = 9.3;
   const { isDark } = useTheme();
 
+  const scoreColor = isDark ? "#ce324a" : "#3b6aeb"; 
+  const remainingColor = isDark ? "#ffffff" : "#444444";
+
   const data = [
-    { id: "score", value: value, color: "#10b981" },
-    { id: "remaining", value: 10 - value, color: "#1e293b" },
+    { id: "score", value: value, color: scoreColor  },
+    { id: "remaining", value: 10 - value, color: remainingColor },
   ];
 
   return (
