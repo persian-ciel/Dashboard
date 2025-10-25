@@ -4,7 +4,7 @@ import CustInfo from "./CustInfo";
 import Welcome from "./Welcome";
 import PersonalInfo from "./PersonalInfo";
 import { useTheme } from "../../../theme/ThemeContext";
-import Platform from "./platform";
+import PlatformSetting from "./platform";
 
 function ProfileIndex({ toggleSidebar }) {
     const { isDark } = useTheme();
@@ -15,7 +15,7 @@ function ProfileIndex({ toggleSidebar }) {
         <CustInfo />
         <Welcome />
         <PersonalInfo />
-        <Platform />
+        <PlatformSetting />
         <div
           className={`${
             isDark ? "text-gray-400" : "text-gray-900"

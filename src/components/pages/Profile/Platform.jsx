@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "../../../theme/ThemeContext";
-function Platform() {
+function PlatformSetting() {
   const { isDark } = useTheme();
   return (
     <>
@@ -82,4 +82,4 @@ function Platform() {
   );
 }
 
-export default Platform;
+export default PlatformSetting;
