@@ -12,17 +12,17 @@ function NavBar({ name, toggleSidebar }) {
         isDark ? "text-white" : "text-black"
       }`}
     >
-      <div className="text-3xl font-bold">{name}</div>
+      <div className="sm:text-3xl text-lg font-bold">{name}</div>
       <div className="flex flex-row justify-center items-center">
         <SearchBar />
-        <CircleUserRound className="cursor-pointer" />
-        <span className="mx-2 cursor-pointer">Sign In</span>
+        <CircleUserRound className="cursor-pointer hidden sm:flex" />
+        <span className="mx-2 cursor-pointer hidden sm:flex">Sign In</span>
         <Menu
           className="mr-2 xl:hidden flex cursor-pointer"
           onClick={toggleSidebar}
         />
-        <Settings className="mx-2 cursor-pointer" />
-        <Bell className="mx-2 cursor-pointer" />
+        <Settings className="mx-2 cursor-pointer hidden sm:flex" />
+        <Bell className="mx-2 cursor-pointer hidden sm:flex" />
         <ThemeToggle />
       </div>
     </div>

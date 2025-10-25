@@ -38,24 +38,26 @@ function ProjectTable() {
   ];
   return (
     <>
-      <div
-        className={`flex text-sm border-b-2 border-gray-400 pb-2 ${
-          isDark ? "text-gray-300" : "text-gray-500"
-        } `}
-      >
-        <div className="w-4/12">PROJECT</div>
-        <div className="w-3/12">BUDGET</div>
-        <div className="w-3/12">STATUS</div>
-        <div className="w-3/12">COMPLETION</div>
+      <div className="w-full overflow-x-auto">
+        <div
+          className={` min-w-[800px] sm:min-w-[600px] flex text-sm border-b-2 border-gray-400 pb-2 ${
+            isDark ? "text-gray-300" : "text-gray-500"
+          } `}
+        >
+          <div className="w-4/12">PROJECT</div>
+          <div className="w-3/12">BUDGET</div>
+          <div className="w-3/12">STATUS</div>
+          <div className="w-3/12">COMPLETION</div>
+        </div>
+        {projectInfo.map((item) => (
+          <ProjectInfo
+            project={item.projects}
+            buget={item.bugets}
+            state={item.states}
+            progress={item.progresses}
+          />
+        ))}
       </div>
-      {projectInfo.map((item) => (
-        <ProjectInfo
-          project={item.projects}
-          buget={item.bugets}
-          state={item.states}
-          progress={item.progresses}
-        />
-      ))}
     </>
   );
 }

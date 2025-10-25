@@ -17,7 +17,7 @@ function Balance() {
           isDark
             ? "bg-gradient-to-tl from-[#21325a] to-[#2b3855]"
             : "bg-gradient-to-tl from-[#e0e8f8] to-[#c0cce7]"
-        }   rounded-2xl w-full h-5/12 px-6 py-4 flex flex-col `}
+        }   rounded-2xl w-full 2xl:h-4/12 xl:h-5/12 sm:h-6/12 h-8/12 px-6 py-4 flex flex-col `}
       >
         <p className={`text-sm font-medium ${isDark ? "text-white" : "text-black"}`}>Credit Balance</p>
         <p className={`text-4xl font-bold  ${isDark ? "text-white" : "text-black"}`}>$25,215</p>

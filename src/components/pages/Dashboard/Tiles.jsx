@@ -24,7 +24,7 @@ function DashboardTiles() {
             isDark
               ? "bg-gradient-to-tl from-[#0e172c] to-[#22335a]"
               : "bg-gradient-to-tl from-[#d5e0f8] to-[#b2c0df]"
-          } xl:w-[23%] w-[48.5%] h-64 bg-cover rounded-2xl px-6 py-4 flex flex-col justify-between`}
+          } xl:w-[23%] sm:w-[48.5%] w-full h-64 bg-cover rounded-2xl px-6 py-4 flex flex-col justify-between`}
         >
           <div>
             <p
@@ -50,7 +50,7 @@ function DashboardTiles() {
             isDark
               ? "bg-gradient-to-tl from-[#0e172c] to-[#22335a]"
               : "bg-gradient-to-tl from-[#d5e0f8] to-[#b2c0df]"
-          } xl:w-[32%] w-[48.5%] h-64 bg-cover rounded-2xl px-6 py-4 flex flex-col justify-between`}
+          } xl:w-[32%] sm:w-[48.5%] w-full 2xl:w-[34.5%] h-64 bg-cover rounded-2xl px-6 py-4 flex flex-col justify-between`}
         >
           <p
             className={`font-bold text-xl ${
@@ -101,7 +101,7 @@ function DashboardTiles() {
             isDark
               ? "bg-gradient-to-tl from-[#0e172c] to-[#22335a]"
               : "bg-gradient-to-tl from-[#d5e0f8] to-[#b2c0df]"
-          } xl:w-[55%] w-[48.5%] h-[420px] bg-cover rounded-2xl px-6 py-4 `}
+          } xl:w-[55%] sm:w-[48.5%] 2xl:w-[56%] w-full h-[420px] bg-cover rounded-2xl px-6 py-4 `}
         >
           <div>
             <p
@@ -128,7 +128,7 @@ function DashboardTiles() {
             isDark
               ? "bg-gradient-to-tl from-[#0e172c] to-[#22335a]"
               : "bg-gradient-to-tl from-[#d5e0f8] to-[#b2c0df]"
-          } xl:w-[41%] w-[48.5%] h-[420px] bg-cover rounded-2xl px-6 py-4 `}
+          } xl:w-[41%] sm:w-[48.5%] w-full h-[420px] 2xl:w-[42.5%] bg-cover rounded-2xl px-6 py-4 `}
         >
           <div>
             <ActiveUsers />

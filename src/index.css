@@ -7,10 +7,14 @@
 body {
   @apply transition-colors duration-500;
 }
+/* Chrome, Safari, Edge, Opera */
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
+
+/* Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none !important; /* IE 10+ */
+  scrollbar-width: none !important; /* Firefox */
 }
+

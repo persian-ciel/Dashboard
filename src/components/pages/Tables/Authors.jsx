@@ -6,7 +6,7 @@ function Authors({ name, email, jobTitle, job, state, date, ImageSource }) {
   const isOnline = state.toLowerCase() === "online";
   return (
     <>
-      <div className={`flex text-sm border-b border-gray-400 pb-2  `}>
+      <div className={`min-w-[800px] sm:min-w-[600px] flex text-sm border-b border-gray-400 pb-2  `}>
         <div className="w-4/12 items-center flex">
           <img
             className="w-10 h-10 rounded-2xl mx-2 my-2"

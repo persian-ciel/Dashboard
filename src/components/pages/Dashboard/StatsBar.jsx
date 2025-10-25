@@ -35,11 +35,11 @@ export default function StatsBar() {
   ];
 
   return (
-    <div className="flex justify-between gap-4 mt-6 flex-wrap xl:w-full w-[80%]">
+    <div className="flex justify-evenly gap-5 mt-6 flex-wrap ">
       {stats.map((stat) => (
         <div
           key={stat.id}
-          className="flex flex-col flex-1   bg-transparent mx-1 "
+          className="flex flex-col flex-1  bg-transparent mx-1 "
         >
           <div className="flex items-center gap-2 mb-1 ">
             <div className={`${isDark ? "bg-[#ce324a]" : "bg-[#3b6aeb]"} p-2  rounded-lg flex items-center justify-center`}>

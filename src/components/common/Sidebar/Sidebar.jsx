@@ -32,7 +32,7 @@ function SidebarMenu({ isOpen, onClose }) {
     <div
       ref={sidebarRef}
       className={`
-        h-full
+        
         xl:flex xl:w-2/12 xl:ml-4 xl:static
         fixed top-0 left-0 w-64 z-50
         ${isOpen ? "translate-x-0 z-50" : "-translate-x-full"}

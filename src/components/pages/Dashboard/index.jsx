@@ -4,7 +4,6 @@ import InformationTiles from "./Information";
 import { Globe, Wallet, StickyNote, ShoppingCart } from "lucide-react";
 import DashboardTiles from "./Tiles";
 
-
 function DashboardIndex({ toggleSidebar }) {
   const Tiles = [
     { title: "today's money", value: "$53,000", icon: Wallet },
@@ -14,18 +13,16 @@ function DashboardIndex({ toggleSidebar }) {
   ];
   return (
     <>
-      <NavBar name="Dashboard" toggleSidebar={toggleSidebar}/>
-      <div className="relative w-full flex flex-row gap-4 overflow-x-scroll hide-scrollbar">
-        
-          {Tiles.map((tile, index) => (
-            <InformationTiles
-              key={index}
-              Tilte={tile.title}
-              Value={tile.value}
-              Icon={tile.icon}
-            />
-          ))}
-        
+      <NavBar name="Dashboard" toggleSidebar={toggleSidebar} />
+      <div className="relative w-full flex sm:flex-row flex-col gap-4 ">
+        {Tiles.map((tile, index) => (
+          <InformationTiles
+            key={index}
+            Tilte={tile.title}
+            Value={tile.value}
+            Icon={tile.icon}
+          />
+        ))}
       </div>
       <DashboardTiles />
     </>

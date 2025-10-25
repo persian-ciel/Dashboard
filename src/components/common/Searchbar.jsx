@@ -5,7 +5,7 @@ import { useTheme } from "../../theme/ThemeContext";
 function SearchBar() {
   const { isDark } = useTheme();
   return (
-    <div className={`flex items-center border  rounded-2xl px-3 py-2 w-64 ${isDark ? "bg-[#0e172c] border-gray-600" : "bg-[#d5e0f8] border-gray-300"}  mr-4`}>
+    <div className={`flex items-center border  rounded-2xl px-3 py-2 sm:w-64 w-32 ${isDark ? "bg-[#0e172c] border-gray-600" : "bg-[#d5e0f8] border-gray-300"}  mr-4`}>
       <button className="text-gray-500 hover:text-gray-800">
         <Search className="w-5 h-5" />
       </button>

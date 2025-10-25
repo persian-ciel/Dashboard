@@ -62,27 +62,29 @@ function AuthorTable() {
   ];
   return (
     <>
-      <div
-        className={`flex text-sm border-b-2 border-gray-400 pb-2 ${
-          isDark ? "text-gray-300" : "text-gray-500"
-        } `}
-      >
-        <div className="w-4/12">AUTHOR</div>
-        <div className="w-3/12">FUNCTION</div>
-        <div className="w-3/12">STATUS</div>
-        <div className="w-3/12">EMPLOYED</div>
+      <div className="w-full overflow-x-auto">
+        <div
+          className={`min-w-[800px] sm:min-w-[600px] flex text-sm border-b-2 border-gray-400 pb-2 ${
+            isDark ? "text-gray-300" : "text-gray-500"
+          } `}
+        >
+          <div className="w-4/12">AUTHOR</div>
+          <div className="w-3/12">FUNCTION</div>
+          <div className="w-3/12">STATUS</div>
+          <div className="w-3/12">EMPLOYED</div>
+        </div>
+        {emplyeInfo.map((item) => (
+          <Authors
+            name={item.name}
+            email={item.email}
+            jobTitle={item.jobTitle}
+            job={item.job}
+            state={item.state}
+            date={item.date}
+            ImageSource={item.ImageSource}
+          />
+        ))}
       </div>
-      {emplyeInfo.map((item) => (
-        <Authors
-          name={item.name}
-          email={item.email}
-          jobTitle={item.jobTitle}
-          job={item.job}
-          state={item.state}
-          date={item.date}
-          ImageSource={item.ImageSource}
-        />
-      ))}
     </>
   );
 }

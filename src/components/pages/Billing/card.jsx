@@ -2,7 +2,7 @@ import React from "react";
 
 function CardInfo() {
   return (
-    <div class="card relative sm:w-[48.5%] w-full flex flex-col justify-end px-6 py-10 text-white rounded-3xl gap-8 bg-[url(/billing-background-card.webp)] bg-cover">
+    <div class="card relative sm:w-[48.5%] 2xl:w-[49.8%] w-full flex flex-col justify-end px-6 py-10 text-white rounded-3xl gap-8 bg-[url(/billing-background-card.webp)] bg-cover">
         <p class="text-2xl  font-bold">Vision UI</p>
       <p class="text-2xl  font-medium">7812   2139   0823   7916</p>
       <div class="flex justify-between gap-10">

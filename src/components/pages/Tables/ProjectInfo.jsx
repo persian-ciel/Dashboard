@@ -5,7 +5,7 @@ function ProjectInfo({ project, buget, state, progress }) {
   const { isDark } = useTheme();
   return (
     <>
-      <div className={`flex text-sm border-b border-gray-400 pb-2  `}>
+      <div className={`min-w-[800px] sm:min-w-[600px] flex text-sm border-b border-gray-400 pb-2  `}>
         <div className="w-4/12 items-center flex">
           <div>
             <p className={`font-bold ${isDark ? "text-white" : "text-black"}`}>
