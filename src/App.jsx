@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardIndex from "./components/pages/Dashboard";
 import TablesIndex from "./components/pages/Tables";
 import { useTheme } from "./theme/ThemeContext";
+import BillingIndex from "./components/pages/Billing/Index";
 
 function App() {
   const { isDark } = useTheme();
@@ -36,7 +37,10 @@ function App() {
                 path="/tables"
                 element={<TablesIndex toggleSidebar={toggleSidebar} />}
               />
-              <Route path="/billing" element={<div>Billing Page</div>} />
+              <Route
+                path="/billing"
+                element={<BillingIndex toggleSidebar={toggleSidebar} />}
+              />
               <Route path="/profile" element={<div>Profile Page</div>} />
               <Route path="/signin" element={<div>Sign In Page</div>} />
               <Route path="/signup" element={<div>Sign Up Page</div>} />

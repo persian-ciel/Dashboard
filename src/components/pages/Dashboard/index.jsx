@@ -15,7 +15,7 @@ function DashboardIndex({ toggleSidebar }) {
   return (
     <>
       <NavBar name="Dashboard" toggleSidebar={toggleSidebar}/>
-      <div className="relative w-full flex flex-row gap-4">
+      <div className="relative w-full flex flex-row gap-4 overflow-x-scroll hide-scrollbar">
         
           {Tiles.map((tile, index) => (
             <InformationTiles

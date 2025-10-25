@@ -10,7 +10,7 @@ function DashboardTiles() {
   const { isDark } = useTheme();
   return (
     <>
-      <main className="flex flex-wrap gap-4 mt-4 w-full">
+      <main className="flex flex-wrap gap-4 mt-4 w-full ">
         <div className="bg-[url(/cardimgfree1.jpg)] xl:w-[40%] w-full h-64 bg-cover rounded-2xl px-6 py-7">
           <p className="text-gray-400">Welcome back,</p>
           <p className="text-white font-bold text-2xl">Mark Johnson</p>
