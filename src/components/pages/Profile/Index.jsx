@@ -4,10 +4,10 @@ import CustInfo from "./CustInfo";
 import Welcome from "./Welcome";
 import PersonalInfo from "./PersonalInfo";
 import { useTheme } from "../../../theme/ThemeContext";
-import PlatformSetting from "./platform";
+import PlatformSetting from "./PlatformSet";
 
 function ProfileIndex({ toggleSidebar }) {
-    const { isDark } = useTheme();
+  const { isDark } = useTheme();
   return (
     <>
       <NavBar name="Profile" toggleSidebar={toggleSidebar} />
