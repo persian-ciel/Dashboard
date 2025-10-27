@@ -25,9 +25,9 @@ function SignIn() {
                 e.preventDefault();
                 console.log("Logging in...");
               }}
-              className="flex flex-col gap-4 mt-7"
+              className="flex flex-col mt-7"
             >
-              <label htmlFor="email" className=" text-lg mb-2 font-medium">
+              <label htmlFor="email" className="2xl:mt-4 mt-2 text-lg mb-2 font-medium">
                 Email
               </label>
               <input
@@ -39,7 +39,7 @@ function SignIn() {
               />
               <label
                 htmlFor="password"
-                className=" text-lg mb-2 font-medium"
+                className="2xl:mt-4 mt-2 text-lg mb-2 font-medium"
               >
                 Password
               </label>
