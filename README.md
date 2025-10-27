@@ -37,6 +37,15 @@ Run the development server:
 npm run dev
 ```
 
+## Demo
+
+<img width="1366" height="600" alt="Screenshot (40)" src="https://github.com/user-attachments/assets/43287e5c-f38e-4db9-8e6a-45f7ae97e956" />
+<img width="1366" height="597" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/d7176932-1097-48cb-9267-56518176efa5" />
+<img width="1366" height="595" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/16382e06-2db9-4927-ad00-00555f6bc0be" />
+<img width="1366" height="599" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/7d332cb9-db5d-4b6c-b9d4-54e1c3590493" />
+
+## Preview 
+you can check the site on https://dashboard-liard-mu.vercel.app
 ## 📂 Project Structure
 
 Dashboard/<br/>
