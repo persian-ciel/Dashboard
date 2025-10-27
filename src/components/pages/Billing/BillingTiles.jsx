@@ -1,5 +1,5 @@
 import React from "react";
-import CardInfo from "./Card";
+import CardInfo from "./card";
 import Balance from "./Balance";
 import PaymentMethod from "./PaymentMethod";
 import Invoices from "./Invoices";
