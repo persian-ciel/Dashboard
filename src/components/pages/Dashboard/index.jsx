@@ -3,8 +3,10 @@ import NavBar from "../../common/Nav/Nav";
 import InformationTiles from "./Information";
 import { Globe, Wallet, StickyNote, ShoppingCart } from "lucide-react";
 import DashboardTiles from "./Tiles";
+import { useOutletContext } from "react-router-dom";
 
-function DashboardIndex({ toggleSidebar }) {
+function DashboardIndex() {
+  const { toggleSidebar } = useOutletContext();
   const Tiles = [
     { title: "today's money", value: "$53,000", icon: Wallet },
     { title: "today's users", value: "2,300", icon: Globe },

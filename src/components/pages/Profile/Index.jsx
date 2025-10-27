@@ -5,8 +5,10 @@ import Welcome from "./Welcome";
 import PersonalInfo from "./PersonalInfo";
 import { useTheme } from "../../../theme/ThemeContext";
 import PlatformSetting from "./PlatformSet";
+import { useOutletContext } from "react-router-dom";
 
-function ProfileIndex({ toggleSidebar }) {
+function ProfileIndex() {
+  const { toggleSidebar } = useOutletContext();
   const { isDark } = useTheme();
   return (
     <>

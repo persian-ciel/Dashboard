@@ -27,10 +27,10 @@ function PlatformSetting() {
             account
           </p>
           <div className="items-center flex my-3 ">
-            <label class="relative inline-flex items-center cursor-pointer mr-2">
-              <input type="checkbox" class="sr-only peer" />
+            <label className="relative inline-flex items-center cursor-pointer mr-2">
+              <input type="checkbox" className="sr-only peer" />
               <div
-                class="group peer bg-[#0e172c] peer-checked:bg-white rounded-full duration-300 w-14 h-6 
+                className="group peer bg-[#0e172c] peer-checked:bg-white rounded-full duration-300 w-14 h-6 
                     after:content-[''] after:duration-300 after:bg-white peer-checked:after:bg-[#0e172c]
                     after:rounded-full after:absolute after:h-4 after:w-4 after:top-1 after:left-1 
                     after:flex after:justify-center after:items-center 
